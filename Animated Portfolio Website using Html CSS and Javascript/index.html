@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Animado</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <section class="banner">
+        <header>
+            <a href="#" class="logo"><span>Meu</span>Portifólio_</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Trabalho</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h3>Salve_</h3>
+            <h2>I am <span id="text">Nahuan</span></h2>
+            <p>Um desenvolvedor é como um artista digital, que utiliza linhas de código ao invés de pincéis, para criar obras de arte que só podem ser vistas na tela do computador.</p>
+
+            <button>Hire Me</button>
+            <button class="chat"><ion-icon name="chatbubbles"></ion-icon> Vamos Conversar</button>
+        </div>
+        <img src="/img/aquarela.png" alt="aquarela"class='colors'>
+
+
+        <ul class="sci">
+            <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+        </ul>
+        <ul class="dayNight">
+            <ion-icon name="moon"></ion-icon>
+            <ion-icon name="sunny"></ion-icon>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>    
+        let typingText = new Typed('#text',{
+            strings : ['Nahuan', 'Designer', "Coder", "DevOps"],
+            loop :true,
+            typeSpeed : 100,
+            backSpeed : 50,
+            backDelay : 1000
+
+        })
+        let banner = document.querySelector('.banner');
+        let dayNight = document.querySelector('.dayNight')
+        dayNight.onclick = function(){
+            banner.classList.toggle('night')
+        }
+    </script>
+</body>
+</html>

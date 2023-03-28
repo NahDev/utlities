@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+*
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Delicious Handrawn', Arial, Helvetica, sans-serif;
+}
+.banner
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+.banner.night
+{
+    background: #333;
+}
+.banner::before
+{
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 150px;
+    height: 150px;
+    background: url(/img/dottedpoint.png);
+    background-size: cover;
+    animation: animateColor 5s ease-in-out infinite;
+}
+header
+{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .logo
+{
+    color:#333  ;
+    font-size:  2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+
+
+}
+
+header .logo span
+{
+    color: #0091ff;
+
+}
+header ul
+{
+    list-style: none;
+    gap: 40px;
+}
+header ul li
+{
+    list-style: none;
+
+}
+header ul li a 
+{
+    text-decoration: none;
+    font-weight: 500;
+    font-size:  1.2em;
+    color: #333;
+    transition: 0.5s;
+    
+}
+.content    
+{
+    position: relative;
+    max-width: 700px;
+    z-index: 10;
+}
+
+.content h3 
+{
+    font-size: 2em;
+    color: #333;
+    font-weight: 200;
+    transition: 0.5s;
+}
+.content h2{
+    font-size: 5.5em;
+    color: #333;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.content h2 span
+{
+    color: #e91e63;
+}
+
+.content p 
+{
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+    transition: 0.5s;
+    
+}
+
+.content button
+{
+    position: relative;
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s; 
+    font-weight: 600;
+}
+.content button .chat  
+{
+    background: transparent;
+    color: #333;
+}
+.content button .chat ion-icon 
+{
+    position: relative;
+    color: #e91e63;
+    top: 5px;
+    font-size: 1.5em;    
+}
+.sci
+{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 20px;
+
+}
+.sci li{
+    list-style: none;
+}
+.sci li a
+{
+    text-decoration: none;
+    font-size:  1.7em;
+    color: #333;
+}
+.sci li a:hover
+{
+    color: #2196f3;
+}
+.dayNight
+{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    align-items:  center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+    display: flex;
+    color: #666;
+    justify-content: center;
+    
+}
+.banner.night .dayNight
+{
+    background: #444;
+    color: #f0f0f0;
+
+}
+.dayNight ion-icon:nth-child(2), 
+.banner.night .dayNight ion-icon:nth-child(1)
+
+{
+    display: none;
+
+}
+.banner.night .dayNight ion-icon:nth-child(2)
+
+{
+    display: block;
+}
+.banner.night .dayNight header.logo,
+.banner.night .dayNight .content h2,
+.banner.night .dayNight .content p,
+.banner.night .dayNight .content button.chat,
+.banner.night .dayNight .sci li a,
+.banner.night .dayNight header ul li a
+{
+    color: #fff;
+}
+.banner.night .dayNight .sci li a:hover
+{ 
+    color: #2196f3;
+}
+.colors
+{
+    position: absolute;
+    right: 0;
+    max-width: 800px;
+    animation: animateColor 4s ease-in-out infinite;
+
+}
+@keyframes animateColor
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(50px);
+    }100%
+    {
+        transform: translateY(0px);
+    }
+    
+}
